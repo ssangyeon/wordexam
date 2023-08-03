@@ -1,0 +1,23 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header" />
+<style>
+    .fieldError {
+        border-color: #bd2130;
+    }
+</style>
+<body>
+<div class="container">
+  <div th:replace="fragments/bodyHeader :: bodyHeader"/>
+  <form action="/challengers/new" method="post">
+    <label>도전자이름<input type="text" name = "challengerName"></label><br>
+    <label>반<input type="text" name= "groupName"></label>
+    <label>비밀번호<input type="password" name= "challengerPassword"></label>
+
+    <button type="submit">회원가입</button>
+  </form>
+  <br/>
+  <div th:replace="fragments/footer :: footer" />
+</div>
+</body>
+</html>

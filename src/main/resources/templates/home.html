@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <title>Word-Spring</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments/bodyHeader :: bodyHeader"></div>
+    <div class="jumbotron">
+        <h1 style="padding-top: 0px; margin-bottom: 20px;  color: darkgrey; text-shadow: 2px 3px #dfc2c4;">단어출제 프로젝트</h1>
+        <h3 class="lead"><b>도전자관리</b></h3>
+        <p>
+            <a class="btn btn-lg btn-secondary" href="/challengers/new">도전자 회원 가입</a>
+            <a class="btn btn-lg btn-secondary" href="/challengers/login">로그인</a>
+            <a class="btn btn-lg btn-secondary" href="/challengerList">도전자 목록</a>
+        </p>
+        <h3 class="lead"><b>단어 출제</b></h3>
+        <p>
+            <a class="btn btn-lg btn-dark" href="/words/new">단어 생성</a>
+            <a class="btn btn-lg btn-dark" href="/wordlist">단어 목록</a>
+            <a class="btn btn-lg btn-dark" href="/words/question">단어 출제</a>
+        </p>
+        <h3 class="lead"><b>배포 기능</b></h3>
+        <p>
+            <a class="btn btn-lg btn-info" href="/distribute/new">배포</a>
+            <a class="btn btn-lg btn-info" href="/distributions">배포 내역</a>
+        </p>
+    </div>
+    <div th:replace="fragments/footer :: footer" />
+</div> <!-- /container -->
+</body>
+</html>

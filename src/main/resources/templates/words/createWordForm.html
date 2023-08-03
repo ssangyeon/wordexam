@@ -1,0 +1,22 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header" />
+<style>
+    .fieldError {
+        border-color: #bd2130;
+    }
+</style>
+<body>
+<div class="container">
+  <div th:replace="fragments/bodyHeader :: bodyHeader"/>
+  <form action="/words/new" method="post">
+    <label>추가할 단어_나라<input type="text" name = "country"></label><br>
+    <label>추가할 단어_수도<input type="text" name = "capital"></label><br>
+    <label>추가할 단어장<input type="text" name= "wordBook"></label>
+    <button type="submit">제출</button>
+  </form>
+  <br/>
+  <div th:replace="fragments/footer :: footer" />
+</div>
+</body>
+</html>
